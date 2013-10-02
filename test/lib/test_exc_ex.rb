@@ -50,4 +50,18 @@ describe ExcEx do
     end
   end
 
+  describe '#build' do 
+    it 'must return ExcEx object' do 
+      ExcEx.build do 
+      end.must_be_instance_of ExcEx
+    end
+
+    it 'must generate regex for all methods given' do 
+      ExcEx.build do 
+        any_number { matching 'pizza' }
+        exactly(1) { matching 'cheeseburger' }
+      end.to_s.must_equal '(pizza)*(cheeseburger){1}'
+    end
+  end
+
 end
