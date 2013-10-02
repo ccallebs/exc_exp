@@ -21,11 +21,12 @@ Or install it yourself as:
 A sample usage would be as follows:
 
 ``` RUBY
-regex = ExcExp.build do
+exc_exp = ExcExp.build do
   any_number { matching 'ExcExp' }
 end
 
-"ExcExp".match regex #=> #<MatchData "ExcExp">
+"ExcExp".match exc_exp.to_regex #=> #<MatchData "ExcExp">
+exc_exp.match "ExcExp" #=> #<MatchData "ExcExp">
 ```
 
 ## Contributing
