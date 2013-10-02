@@ -1,6 +1,6 @@
 # ExcEx
 
-TODO: Write a gem description
+ExcEx is an ambitious attempt at constructing a regular expression DSL. Unfortunately, most regular expressions are write-only. This project aims to fix that.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+A sample usage would be as follows:
+
+``` RUBY
+regex = ExcEx.build do
+  any_number { matching 'ExcEx' }
+end
+
+"ExcEx".match regex #=> #<MatchData "ExcEx">
+```
 
 ## Contributing
 
