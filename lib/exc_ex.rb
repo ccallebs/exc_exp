@@ -35,8 +35,12 @@ class ExcEx
     '\w'
   end
 
-  def to_regex
-    Regex.new @regex_string
+  def match(string)
+    to_regexp.match string
+  end
+
+  def to_regexp
+    Regexp.new @regex_string
   end
 
   def to_s

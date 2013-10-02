@@ -64,4 +64,32 @@ describe ExcEx do
     end
   end
 
+  describe '#to_regex' do 
+    before do 
+      @exc_ex = ExcEx.build do 
+        any_number { matching '5' }
+      end
+    end
+
+    it 'must return Regexp object' do 
+      @exc_ex.to_regexp.must_be_instance_of Regexp
+    end
+
+    it 'should compare successfully to regex' do 
+      '5'.match(@exc_ex.to_regexp).must_be_instance_of MatchData
+    end
+  end
+
+  describe '#match' do 
+    before do 
+      @exc_ex = ExcEx.build do 
+        any_number { matching '5' }
+      end
+    end
+
+    it 'should compare successfully to string' do 
+      @exc_ex.match('5').must_be_instance_of MatchData
+    end
+  end
+
 end
