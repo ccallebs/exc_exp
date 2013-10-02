@@ -1,6 +1,5 @@
-require "exc_ex/version"
+require "./lib/exc_ex/version"
 require './lib/expression_helper'
-require './lib/expression_storage'
 
 class ExcEx
 
@@ -25,7 +24,7 @@ class ExcEx
   end
 
   def in_range range
-    @regex_string += yield + "#{range[0]}, #{range[1]}"
+    @regex_string += yield + "{#{range[0]},#{range[1]}}"
   end
 
   def digits
