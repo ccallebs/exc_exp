@@ -1,4 +1,4 @@
-require "./lib/exc_ex/version"
+require "./lib/exc_exp/version"
 require './lib/expression_helper'
 
 class ExcExp

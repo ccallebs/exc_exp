@@ -1,3 +1,3 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require File.expand_path('../../lib/exc_ex.rb', __FILE__)
+require File.expand_path('../../lib/exc_exp.rb', __FILE__)

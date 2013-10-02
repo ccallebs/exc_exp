@@ -6,7 +6,7 @@ ExcExp is an ambitious attempt at constructing a regular expression DSL. Unfortu
 
 Add this line to your application's Gemfile:
 
-    gem 'exc_ex'
+    gem 'exc_exp'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install exc_ex
+    $ gem install exc_exp
 
 ## Usage
 
