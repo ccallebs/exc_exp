@@ -1,6 +1,6 @@
-# ExcEx
+# ExcExp
 
-ExcEx is an ambitious attempt at constructing a regular expression DSL. Unfortunately, most regular expressions are write-only. This project aims to fix that.
+ExcExp is an ambitious attempt at constructing a regular expression DSL. Unfortunately, most regular expressions are write-only. This project aims to fix that.
 
 ## Installation
 
@@ -21,11 +21,11 @@ Or install it yourself as:
 A sample usage would be as follows:
 
 ``` RUBY
-regex = ExcEx.build do
-  any_number { matching 'ExcEx' }
+regex = ExcExp.build do
+  any_number { matching 'ExcExp' }
 end
 
-"ExcEx".match regex #=> #<MatchData "ExcEx">
+"ExcExp".match regex #=> #<MatchData "ExcExp">
 ```
 
 ## Contributing

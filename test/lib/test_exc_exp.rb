@@ -1,8 +1,8 @@
 require_relative '../test_helper'
 
-describe ExcEx do 
+describe ExcExp do 
   before do 
-    @exc_ex = ExcEx.new
+    @exc_ex = ExcExp.new
   end
 
   describe '#matching' do 
@@ -51,13 +51,13 @@ describe ExcEx do
   end
 
   describe '#build' do 
-    it 'must return ExcEx object' do 
-      ExcEx.build do 
-      end.must_be_instance_of ExcEx
+    it 'must return ExcExp object' do 
+      ExcExp.build do 
+      end.must_be_instance_of ExcExp
     end
 
     it 'must generate regex for all methods given' do 
-      ExcEx.build do 
+      ExcExp.build do 
         any_number { matching 'pizza' }
         exactly(1) { matching 'cheeseburger' }
       end.to_s.must_equal '(pizza)*(cheeseburger){1}'
@@ -66,7 +66,7 @@ describe ExcEx do
 
   describe '#to_regex' do 
     before do 
-      @exc_ex = ExcEx.build do 
+      @exc_ex = ExcExp.build do 
         any_number { matching '5' }
       end
     end
@@ -82,7 +82,7 @@ describe ExcEx do
 
   describe '#match' do 
     before do 
-      @exc_ex = ExcEx.build do 
+      @exc_ex = ExcExp.build do 
         any_number { matching '5' }
       end
     end

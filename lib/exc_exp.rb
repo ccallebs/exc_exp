@@ -1,7 +1,7 @@
 require "./lib/exc_ex/version"
 require './lib/expression_helper'
 
-class ExcEx
+class ExcExp
 
   def initialize
     @regex_string = ''
@@ -48,7 +48,7 @@ class ExcEx
   end
 
   def self.build &block
-    @this = ExcEx.new
+    @this = ExcExp.new
     @this.instance_eval &block
     @this
   end

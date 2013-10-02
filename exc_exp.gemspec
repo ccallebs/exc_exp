@@ -5,7 +5,7 @@ require 'exc_ex/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "exc_ex"
-  spec.version       = ExcEx::VERSION
+  spec.version       = ExcExp::VERSION
   spec.authors       = ["Chuck Callebs"]
   spec.email         = ["cacallebs@gmail.com"]
   spec.description   = %q{TODO: Write a gem description}

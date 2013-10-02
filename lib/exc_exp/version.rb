@@ -1,3 +1,3 @@
-class ExcEx
+class ExcExp
   VERSION = "0.0.1"
 end
