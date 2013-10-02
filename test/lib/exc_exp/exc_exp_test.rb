@@ -12,6 +12,13 @@ describe ExcExp do
     end
   end
 
+  describe '#group' do 
+    it 'must surround entire block in parenthesis' do 
+      string = @exc_exp.group { @exc_exp.any_number { 'pizza' } }
+      string.must_equal '(pizza*)'
+    end
+  end
+
   describe '#any_number' do 
     it 'must append block with asterisk (*)' do 
       string = @exc_exp.any_number { 'pizza' }

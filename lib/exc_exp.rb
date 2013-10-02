@@ -7,8 +7,20 @@ class ExcExp
     @regex_string = ''
   end
 
+  def group
+    "(#{yield})"
+  end
+
   def matching args
     ExpressionHelper.grouping { ExpressionHelper.matching(args) }
+  end
+
+  def digits
+    '\d'
+  end
+
+  def words
+    '\w'
   end
 
   def any_number
@@ -25,14 +37,6 @@ class ExcExp
 
   def in_range range
     @regex_string += yield + "{#{range[0]},#{range[1]}}"
-  end
-
-  def digits
-    '\d'
-  end
-
-  def words
-    '\w'
   end
 
   def match(string)
